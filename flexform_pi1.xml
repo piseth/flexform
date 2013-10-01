@@ -1,0 +1,229 @@
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Flex Form</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- switchable controller-->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>whattodisplay</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Products</numIndex>
+										<numIndex index="1">Products->list;Products->show;Products->new;Products->create;Products->edit;Products->update;Products->delete;Products->test</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Product Type List</numIndex>
+										<numIndex index="1">ProductTypes->list;ProductTypes->show;ProductTypes->new;ProductTypes->create;ProductTypes->edit;ProductTypes->update;ProductTypes->delete</numIndex>
+									</numIndex>
+								</items>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+					<!-- input number-->
+					<settings.numberOfProductSearch>
+						<TCEforms>
+							<label>Select max result on List action</label>
+							<config>
+								<type>input</type>
+								<size>2</size>
+								<eval>int</eval>
+								<default>3</default>
+							</config>
+						</TCEforms>
+					</settings.numberOfProductSearch>
+					<!-- select page-->
+					<settings.noRecordMessage>
+						<TCEforms>
+							<label>Select Page</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>3</size>
+								<maxitems>22</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.noRecordMessage>
+					<!-- file-->
+					<settings.maxResultPerPage>
+						<TCEforms>
+							<label>Select Template file</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>gif, jpg,jpeg,png,csv</allowed>
+								<max_size>10000</max_size>
+								<uploadfolder>uploads/tx_axprice</uploadfolder>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<show_thumbs>1</show_thumbs>
+								<selectedliststyle>Width:180px</selectedliststyle>
+							</config>
+						</TCEforms>
+					</settings.maxResultPerPage>
+					<!-- radio button-->
+					<settings.testRadio>
+						<TCEforms>
+							<label>Radio Test</label>
+							<config>
+								<type>radio</type>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Hello</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:extxxx/locallang_db.xml:flexform.show_mode.2</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.testRadio>
+					<!--check box-->
+					<settings.testCheckBox>
+						<TCEforms>
+							<label>Test checkbox</label>
+							<config>
+								<type>check</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">1</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">2</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">4</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.testCheckBox>
+					<!--select box-->
+					<settings.itemName>
+						<TCEforms>
+							<label>Configuration options for xxx</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.itemName>
+					<!-- select record -->
+					<settings.mapSearchView_campaingStatus>
+						<TCEforms>
+							<label>LLL:EXT:we_campaigns/Resources/Private/Language/locallang_db.xml:tx_wecampaigns_domain_model_campaign.campaign_status</label>
+							<displayCond>FIELD:switchableControllerActions:=:Project->showMap</displayCond>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_wecampaigns_domain_model_campaignstatus</allowed>
+								<size>10</size>
+								<maxitems>9999</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.mapSearchView_campaingStatus>
+					<!-- text area -->
+					<settings.textArea>
+						<TCEforms>
+							<label>Text Area</label>
+							<config>
+								<type>text</type>
+								<cols>40</cols>
+								<rows>10</rows>
+								<default></default>
+							</config>
+						</TCEforms>
+					</settings.textArea>
+					<!-- text area with RTE -->
+					<settings.address>
+						<TCEforms>
+							<label>dynFiled</label>
+							<config>
+								<type>text</type>
+								<cols>40</cols>
+								<rows>10</rows>
+								<wrap>virtual</wrap>
+								<default></default>
+							</config>
+							<defaultExtras>
+								richtext[*]:rte_transform[mode=ts_css]
+							</defaultExtras>
+						</TCEforms>
+					</settings.address>
+					<!-- color selector -->
+					<settings.addressd>
+						<TCEforms>
+							<label>test</label>
+							<config>
+								<type>input</type>
+								<size>6</size>
+								<wizards>
+									<color>
+										<type>colorbox</type>
+										<dim>212x18</dim>
+										<tableStyle>border:solid 1px black;</tableStyle>
+										<script>wizard_colorpicker.php</script>
+										<JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+									</color>
+								</wizards>
+								<default></default>
+								<eval>#555555</eval>
+							</config>
+						</TCEforms>
+					</settings.addressd>
+					<!-- color selector -->
+					<settings.link>
+						<TCEforms>
+							<label>test</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+								<size>60</size>
+								<default></default>
+								<wizards type="array">
+									<_PADDING type="integer">2</_PADDING>
+									<link type="array">
+										<type>popup</type>
+										<title>Link</title>
+										<icon>link_popup.gif</icon>
+										<script>browse_links.php?mode=wizard</script>
+										<JSopenParams>height=500,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+									</link>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.link>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
