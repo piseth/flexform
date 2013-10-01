@@ -33,6 +33,19 @@
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
+					<!-- input text-->
+					<settings.name>
+						<TCEforms>
+							<label>Organization name</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+								<size>20</size>
+								<max>30</max>
+								<default></default>
+							</config>
+						</TCEforms>
+					</settings.name>
 					<!-- input number-->
 					<settings.numberOfProductSearch>
 						<TCEforms>
@@ -200,7 +213,7 @@
 							</config>
 						</TCEforms>
 					</settings.addressd>
-					<!-- color selector -->
+					<!-- input link -->
 					<settings.link>
 						<TCEforms>
 							<label>test</label>
